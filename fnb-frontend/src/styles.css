@@ -1,0 +1,326 @@
+/* ============================================
+   Future Namibia Bank - Global Styles
+   Payments Made Better
+   Main color: #6aa84f | Minor: #9fc5e8
+   ============================================ */
+
+/* CSS Variables */
+:root {
+  --fnb-primary: #6aa84f;
+  --fnb-primary-dark: #4d7a39;
+  --fnb-primary-light: #89c46b;
+  --fnb-primary-pale: #e8f4e3;
+  --fnb-secondary: #9fc5e8;
+  --fnb-secondary-dark: #6aa0cc;
+  --fnb-secondary-light: #c5ddf2;
+  --fnb-secondary-pale: #eaf4fc;
+  --fnb-white: #ffffff;
+  --fnb-black: #1a1a1a;
+  --fnb-gray-50: #f9fafb;
+  --fnb-gray-100: #f3f4f6;
+  --fnb-gray-200: #e5e7eb;
+  --fnb-gray-300: #d1d5db;
+  --fnb-gray-400: #9ca3af;
+  --fnb-gray-500: #6b7280;
+  --fnb-gray-600: #4b5563;
+  --fnb-gray-700: #374151;
+  --fnb-gray-800: #1f2937;
+  --fnb-success: #22c55e;
+  --fnb-danger: #ef4444;
+  --fnb-warning: #f59e0b;
+  --fnb-info: #3b82f6;
+  --fnb-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --fnb-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --fnb-shadow-md: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --fnb-shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.12);
+  --fnb-radius: 8px;
+  --fnb-radius-lg: 16px;
+  --fnb-transition: all 0.2s ease;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  color: var(--fnb-gray-800);
+  background-color: var(--fnb-gray-50);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--fnb-gray-800);
+}
+
+a {
+  color: var(--fnb-primary);
+  text-decoration: none;
+  transition: var(--fnb-transition);
+}
+
+a:hover {
+  color: var(--fnb-primary-dark);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--fnb-radius);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--fnb-transition);
+  font-family: inherit;
+}
+
+.btn-primary {
+  background-color: var(--fnb-primary);
+  color: var(--fnb-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--fnb-primary-dark);
+  box-shadow: var(--fnb-shadow-md);
+}
+
+.btn-secondary {
+  background-color: var(--fnb-secondary);
+  color: var(--fnb-gray-800);
+}
+
+.btn-secondary:hover {
+  background-color: var(--fnb-secondary-dark);
+  color: var(--fnb-white);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--fnb-primary);
+  color: var(--fnb-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--fnb-primary);
+  color: var(--fnb-white);
+}
+
+.btn-danger {
+  background-color: var(--fnb-danger);
+  color: var(--fnb-white);
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 12px;
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: var(--fnb-radius-lg);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Cards */
+.card {
+  background: var(--fnb-white);
+  border-radius: var(--fnb-radius-lg);
+  box-shadow: var(--fnb-shadow);
+  padding: 24px;
+  transition: var(--fnb-transition);
+}
+
+.card:hover {
+  box-shadow: var(--fnb-shadow-md);
+}
+
+/* Form Inputs */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--fnb-gray-600);
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--fnb-gray-200);
+  border-radius: var(--fnb-radius);
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--fnb-gray-800);
+  background-color: var(--fnb-white);
+  transition: var(--fnb-transition);
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: var(--fnb-primary);
+  box-shadow: 0 0 0 3px rgba(106, 168, 79, 0.15);
+}
+
+.form-control::placeholder {
+  color: var(--fnb-gray-400);
+}
+
+.form-control.error {
+  border-color: var(--fnb-danger);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-success {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: var(--fnb-success);
+}
+
+.badge-danger {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--fnb-danger);
+}
+
+.badge-warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--fnb-warning);
+}
+
+.badge-info {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--fnb-info);
+}
+
+/* Alerts */
+.alert {
+  padding: 12px 16px;
+  border-radius: var(--fnb-radius);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.alert-danger {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--fnb-danger);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.alert-success {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #16a34a;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--fnb-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--fnb-primary);
+  border-radius: 3px;
+}
+
+/* Layout utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gap-4 { gap: 4px; }
+.gap-8 { gap: 8px; }
+.gap-12 { gap: 12px; }
+.gap-16 { gap: 16px; }
+.gap-24 { gap: 24px; }
+
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-primary { color: var(--fnb-primary); }
+.text-secondary { color: var(--fnb-secondary-dark); }
+.text-muted { color: var(--fnb-gray-500); }
+.text-danger { color: var(--fnb-danger); }
+.text-success { color: var(--fnb-success); }
+
+.w-full { width: 100%; }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+
+/* Loading spinner */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--fnb-gray-200);
+  border-top-color: var(--fnb-primary);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 16px;
+  }
+  body {
+    font-size: 13px;
+  }
+}

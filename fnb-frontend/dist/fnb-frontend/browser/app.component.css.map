@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["angular:styles/component:css;54ff5eb71225a3461de78919f217245e92239b2be46f2dc3eb49d827e1968a58;/Users/veijoshikongo/Desktop/FutureNamibiaBank/fnb-frontend/src/app/app.component.ts"],
+  "sourcesContent": ["\n    main {\n      min-height: 100vh;\n      background-color: var(--fnb-gray-50);\n    }\n    main.with-nav {\n      padding-top: 64px;\n    }\n  "],
+  "mappings": ";AACI;AACE,cAAY;AACZ,oBAAkB,IAAI;AACxB;AACA,IAAI,CAAC;AACH,eAAa;AACf;",
+  "names": []
+}
